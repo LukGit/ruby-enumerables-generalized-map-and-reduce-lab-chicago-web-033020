@@ -9,3 +9,15 @@ def map (source_array)
   return new
 end
 
+def reduce(source_array, starting_point=nil)
+  i = 0
+  num = 0
+  if starting_point 
+    num = starting_point
+  end
+  while i < source_array.size do
+    num =  yield(source_array[i], num)
+    i += 1
+  end
+  num
+end
