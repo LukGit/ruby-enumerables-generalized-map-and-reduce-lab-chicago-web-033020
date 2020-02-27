@@ -19,8 +19,8 @@ def reduce(source_array, starting_point=nil)
     num =  yield(source_array[i], num)
     i += 1
   end
-  if num == 0 
-    num = true 
+  if num == nil 
+    num = false 
   end
   num
 end
