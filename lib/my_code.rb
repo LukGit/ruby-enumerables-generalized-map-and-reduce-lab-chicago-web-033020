@@ -14,13 +14,13 @@ def reduce(source_array, starting_point=nil)
   num = 0
   if starting_point 
     num = starting_point
+  else
+    num = source_array[i]
+    i = 1
   end
   while i < source_array.size do
     num =  yield(source_array[i], num)
     i += 1
-  end
-  if num == nil 
-    num = false 
   end
   num
 end
